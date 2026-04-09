@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "vue.volar",
+    "rust-lang.rust-analyzer",
+    "charliermarsh.ruff"
+  ]
+}

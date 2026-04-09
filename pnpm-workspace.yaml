@@ -1,0 +1,7 @@
+# /pnpm-workspace.yaml
+packages:
+  # 所有在 apps 目录下的前端和后端项目
+  - "apps/*/front-end"
+  - "apps/*/back-end"
+
+  - "packages/vendor/fuyeor/packages/*"
