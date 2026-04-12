@@ -4,8 +4,11 @@ import { customElement } from 'lit/decorators.js';
 
 import '@fuyeor/locale';
 import './components/system/status-bar';
+import './components/system/screen';
 import './components/system/task-bar';
 import './components/system/start-menu';
+
+import '@/components/system/toast-provider';
 
 @customElement('system-view')
 export class SystemView extends LitElement {
@@ -18,10 +21,10 @@ export class SystemView extends LitElement {
       background-image: radial-gradient(circle at center, #1a1a2e 0%, #000 100%);
     }
 
-    .os-viewport {
+    system-screen {
       flex: 1;
       position: relative;
-      overflow: hidden;
+      z-index: 10; /* 低于 status-bar 的 1000 */
     }
   `;
 
@@ -36,12 +39,14 @@ export class SystemView extends LitElement {
       <system-status-bar></system-status-bar>
 
       <!-- 系统主视口（桌面与窗口） -->
-      <div class="os-viewport">
+      <system-screen>
         <system-start-menu></system-start-menu>
-      </div>
+      </system-screen>
 
       <!-- 底部任务栏/Dock -->
       <system-task-bar> </system-task-bar>
+
+      <toast-provider></toast-provider>
     `;
   }
 }

@@ -1,8 +1,12 @@
-// @/components/system/menu.ts
+// @/components/system/start-menu.ts
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { SignalWatcher } from '@lit-labs/signals';
 import { isStartMenuOpen } from '@/shared/signals/ui';
+import { toggleStartMenu } from '@/shared/signals/ui';
+import { WindowManagerAPI } from '@/shared/signals/wm';
+
+import '@/apps/options/system-options';
 
 @customElement('system-start-menu')
 export class SystemStartMenu extends SignalWatcher(LitElement) {
@@ -52,6 +56,11 @@ export class SystemStartMenu extends SignalWatcher(LitElement) {
     }
   `;
 
+  #openSettings() {
+    toggleStartMenu();
+    WindowManagerAPI.openApp('settings', 'System Settings', 'system-options');
+  }
+
   render() {
     const isOpen = isStartMenuOpen.get();
     this.toggleAttribute('open', isOpen);
@@ -61,7 +70,7 @@ export class SystemStartMenu extends SignalWatcher(LitElement) {
         <h3><locale-template keypath="system.start"></locale-template></h3>
       </div>
       <div class="menu-content">
-        <div class="menu-item">
+        <div class="menu-item" @click=${this.#openSettings}>
           <locale-template keypath="settings"></locale-template>
         </div>
         <div class="menu-item">

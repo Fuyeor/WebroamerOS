@@ -15,3 +15,104 @@ body {
   flex-direction: column;
   width: 100vw;
 }
+
+/* System Tooltip */
+.f-tooltip {
+  /* 定位与层级 */
+  position: absolute;
+  z-index: 1000;
+  /* 外观 */
+  background: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  /* 尺寸与换行 */
+  max-width: 250px;
+  white-space: normal;
+  /* 允许内容换行 */
+  word-wrap: break-word;
+  /* 长单词换行 */
+  text-align: center;
+  /* 动画效果 */
+  will-change: transform;
+  transform: translateZ(0);
+  opacity: 0;
+  transform: scale(0.95);
+  transition:
+    opacity 200ms ease-in-out,
+    transform 200ms ease-in-out;
+  pointer-events: none;
+  /* 确保 tooltip 不会干扰鼠标事件 */
+}
+
+/* Tooltip 可见时的状态 */
+.f-tooltip.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 箭头伪元素 */
+.f-tooltip::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* --- 不同方向的样式 --- */
+
+/* 向上 (默认) */
+.f-tooltip-top {
+  transform-origin: bottom center;
+}
+
+.f-tooltip-top::after {
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* 向下 */
+.f-tooltip-bottom {
+  transform-origin: top center;
+}
+
+.f-tooltip-bottom::after {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-color: transparent transparent #333 transparent;
+}
+
+/* 向左 */
+.f-tooltip-left {
+  transform-origin: right center;
+}
+
+.f-tooltip-left::after {
+  left: 100%;
+  top: 50%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-color: transparent transparent transparent #333;
+}
+
+/* 向右 */
+.f-tooltip-right {
+  transform-origin: left center;
+}
+
+.f-tooltip-right::after {
+  right: 100%;
+  top: 50%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-color: transparent #333 transparent transparent;
+}

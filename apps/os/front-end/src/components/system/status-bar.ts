@@ -13,22 +13,18 @@ export class SystemStatusBar extends SignalWatcher(LitElement) {
     :host {
       display: block;
       width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
       z-index: 1000;
     }
 
     .status-bar {
-      height: var(--status-bar-height, 32px);
-      padding: 0 16px;
+      height: var(--status-bar-height);
+      padding: 0px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(0, 0, 0, 0.3);
       backdrop-filter: var(--glass-blur);
-      font-size: 12px;
-      color: #fff;
+      font-size: 0.75rem;
+      color: rgb(255, 255, 255);
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       box-sizing: border-box;
     }

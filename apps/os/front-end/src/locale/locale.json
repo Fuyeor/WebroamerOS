@@ -34,5 +34,89 @@
     "pt": "Papel de parede da tela",
     "ru": "Обои экрана",
     "zh-hans": "屏幕壁纸"
+  },
+  "settings": {
+    "ar": "الإعدادات",
+    "de": "Einstellungen",
+    "en": "Settings",
+    "es": "Configuración",
+    "fr": "Paramètres",
+    "ja": "設定",
+    "ko": "설정",
+    "pt": "Configurações",
+    "ru": "Настройки",
+    "zh-hans": "设置"
+  },
+  "settings.theme.auto": {
+    "ar": "تلقائي",
+    "de": "Automatisch",
+    "en": "Auto",
+    "es": "Automático",
+    "fr": "Automatique",
+    "ja": "自動",
+    "ko": "자동",
+    "pt": "Automático",
+    "ru": "Авто",
+    "zh-hans": "自动"
+  },
+  "settings.theme.black": {
+    "ar": "أسود نقي",
+    "de": "Rein Schwarz",
+    "en": "Pure Black",
+    "es": "Negro puro",
+    "fr": "Noir pur",
+    "ja": "純黒モード",
+    "ko": "순흑",
+    "pt": "Preto puro",
+    "ru": "Чистый чёрный",
+    "zh-hans": "纯黑模式"
+  },
+  "settings.theme.contrast": {
+    "ar": "تباين عالٍ",
+    "de": "Hoher Kontrast",
+    "en": "High Contrast",
+    "es": "Alto contraste",
+    "fr": "Contraste élevé",
+    "ja": "高コントラストモード",
+    "ko": "고대비",
+    "pt": "Alto contraste",
+    "ru": "Высокая контрастность",
+    "zh-hans": "高对比度"
+  },
+  "settings.theme.dark": {
+    "ar": "داكن",
+    "de": "Dunkel",
+    "en": "Dark",
+    "es": "Oscuro",
+    "fr": "Sombre",
+    "ja": "ダークモード",
+    "ko": "다크",
+    "pt": "Escuro",
+    "ru": "Тёмная",
+    "zh-hans": "暗色模式"
+  },
+  "settings.theme.fontsize": {
+    "ar": "حجم الخط",
+    "de": "Schriftgröße",
+    "en": "Font Size",
+    "es": "Tamaño de fuente",
+    "fr": "Taille de police",
+    "ja": "フォントサイズ",
+    "ko": "글꼴 크기",
+    "pt": "Tamanho da fonte",
+    "ru": "Размер шрифта",
+    "zh-hans": "字体大小"
+  },
+  "settings.theme.mode": {
+    "ar": "المظهر",
+    "de": "Erscheinungsbild",
+    "en": "Appearance",
+    "es": "Apariencia",
+    "fr": "Apparence",
+    "ja": "テーマ",
+    "ko": "외관",
+    "pt": "Aparência",
+    "ru": "Внешний вид",
+    "zh-hans": "主题模式"
   }
 }
