@@ -2,9 +2,6 @@
   // 保存时自动格式化
   "editor.formatOnSave": true,
   // 按语言指定默认格式化工具
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -13,6 +10,9 @@
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
@@ -28,6 +28,6 @@
     "**/node_modules": true,
     "**/dist": true,
     "**/build": true,
-    "**/generated": true,
-  },
+    "**/target": true
+  }
 }
