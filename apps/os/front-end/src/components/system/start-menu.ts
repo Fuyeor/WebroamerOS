@@ -7,6 +7,7 @@ import { toggleStartMenu } from '@/shared/signals/ui';
 import { WindowManagerAPI } from '@/shared/signals/wm';
 
 import '@/apps/options/system-options';
+import '@/apps/about/about-pc';
 
 @customElement('system-start-menu')
 export class SystemStartMenu extends SignalWatcher(LitElement) {
@@ -61,6 +62,11 @@ export class SystemStartMenu extends SignalWatcher(LitElement) {
     WindowManagerAPI.openApp('settings', 'System Settings', 'system-options');
   }
 
+  #openAbout() {
+    toggleStartMenu();
+    WindowManagerAPI.openApp('about-pc', 'About This PC', 'app-about');
+  }
+
   render() {
     const isOpen = isStartMenuOpen.get();
     this.toggleAttribute('open', isOpen);
@@ -72,6 +78,10 @@ export class SystemStartMenu extends SignalWatcher(LitElement) {
       <div class="menu-content">
         <div class="menu-item" @click=${this.#openSettings}>
           <locale-template keypath="settings"></locale-template>
+        </div>
+        <div class="menu-item" @click=${this.#openAbout}>
+          <span>ℹ️</span>
+          <locale-template keypath="menu.about"></locale-template>
         </div>
         <div class="menu-item">
           <locale-template keypath="menu.shutdown"></locale-template>

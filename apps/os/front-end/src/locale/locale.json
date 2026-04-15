@@ -1,40 +1,4 @@
 {
-  "system.start": {
-    "ar": "ابدأ",
-    "de": "Starten",
-    "en": "Start",
-    "es": "Iniciar",
-    "fr": "Démarrer",
-    "ja": "開始",
-    "ko": "시작",
-    "pt": "Iniciar",
-    "ru": "Пуск",
-    "zh-hans": "开始"
-  },
-  "system.wallpaper.lock": {
-    "ar": "خلفية شاشة القفل",
-    "de": "Sperrbildschirm-Hintergrund",
-    "en": "Lock Screen Wallpaper",
-    "es": "Fondo de pantalla de bloqueo",
-    "fr": "Fond d'écran de verrouillage",
-    "ja": "ロック画面の壁紙",
-    "ko": "잠금 화면 배경화면",
-    "pt": "Papel de parede da tela de bloqueio",
-    "ru": "Обои экрана блокировки",
-    "zh-hans": "锁屏壁纸"
-  },
-  "system.wallpaper.screen": {
-    "ar": "خلفية الشاشة",
-    "de": "Bildschirmhintergrund",
-    "en": "Screen Wallpaper",
-    "es": "Fondo de pantalla",
-    "fr": "Fond d'écran",
-    "ja": "スクリーン壁紙",
-    "ko": "화면 배경화면",
-    "pt": "Papel de parede da tela",
-    "ru": "Обои экрана",
-    "zh-hans": "屏幕壁纸"
-  },
   "settings": {
     "ar": "الإعدادات",
     "de": "Einstellungen",
@@ -47,17 +11,65 @@
     "ru": "Настройки",
     "zh-hans": "设置"
   },
-  "settings.theme.auto": {
-    "ar": "تلقائي",
-    "de": "Automatisch",
-    "en": "Auto",
-    "es": "Automático",
-    "fr": "Automatique",
-    "ja": "自動",
-    "ko": "자동",
-    "pt": "Automático",
-    "ru": "Авто",
-    "zh-hans": "自动"
+  "settings.fontsize.large": {
+    "ar": "كبير",
+    "de": "Groß",
+    "en": "Large",
+    "es": "Grande",
+    "fr": "Grand",
+    "ja": "大",
+    "ko": "큰",
+    "pt": "Grande",
+    "ru": "Большой",
+    "zh-hans": "大"
+  },
+  "settings.fontsize.largest": {
+    "ar": "الأكبر",
+    "de": "Am größten",
+    "en": "Largest",
+    "es": "Muy grande",
+    "fr": "Très grand",
+    "ja": "最大",
+    "ko": "최대",
+    "pt": "Maior",
+    "ru": "Самый большой",
+    "zh-hans": "最大"
+  },
+  "settings.fontsize.medium": {
+    "ar": "متوسط",
+    "de": "Mittel",
+    "en": "Medium",
+    "es": "Mediano",
+    "fr": "Moyen",
+    "ja": "標準",
+    "ko": "보통",
+    "pt": "Médio",
+    "ru": "Средний",
+    "zh-hans": "适中"
+  },
+  "settings.fontsize.small": {
+    "ar": "صغير",
+    "de": "Klein",
+    "en": "Small",
+    "es": "Pequeño",
+    "fr": "Petit",
+    "ja": "小",
+    "ko": "작은",
+    "pt": "Pequeno",
+    "ru": "Маленький",
+    "zh-hans": "小"
+  },
+  "settings.fontsize.smallest": {
+    "ar": "الأصغر",
+    "de": "Am kleinsten",
+    "en": "Smallest",
+    "es": "Muy pequeño",
+    "fr": "Très petit",
+    "ja": "最小",
+    "ko": "최소",
+    "pt": "Menor",
+    "ru": "Самый маленький",
+    "zh-hans": "最小"
   },
   "settings.theme.black": {
     "ar": "أسود نقي",
@@ -107,6 +119,18 @@
     "ru": "Размер шрифта",
     "zh-hans": "字体大小"
   },
+  "settings.theme.light": {
+    "ar": "فاتح",
+    "de": "Hell",
+    "en": "Light",
+    "es": "Claro",
+    "fr": "Clair",
+    "ja": "ライト",
+    "ko": "라이트",
+    "pt": "Claro",
+    "ru": "Светлая",
+    "zh-hans": "亮色模式"
+  },
   "settings.theme.mode": {
     "ar": "المظهر",
     "de": "Erscheinungsbild",
@@ -118,5 +142,149 @@
     "pt": "Aparência",
     "ru": "Внешний вид",
     "zh-hans": "主题模式"
+  },
+  "settings.wallpaper.lock": {
+    "ar": "خلفية شاشة القفل",
+    "de": "Sperrbildschirm-Hintergrund",
+    "en": "Lock Screen Wallpaper",
+    "es": "Fondo de pantalla de bloqueo",
+    "fr": "Fond d'écran de verrouillage",
+    "ja": "ロック画面の壁紙",
+    "ko": "잠금 화면 배경화면",
+    "pt": "Papel de parede da tela de bloqueio",
+    "ru": "Обои экрана блокировки",
+    "zh-hans": "锁屏壁纸"
+  },
+  "settings.wallpaper.screen": {
+    "ar": "خلفية الشاشة",
+    "de": "Bildschirmhintergrund",
+    "en": "Screen Wallpaper",
+    "es": "Fondo de pantalla",
+    "fr": "Fond d'écran",
+    "ja": "スクリーン壁紙",
+    "ko": "화면 배경화면",
+    "pt": "Papel de parede da tela",
+    "ru": "Обои экрана",
+    "zh-hans": "屏幕壁纸"
+  },
+  "system.about.cpu": {
+    "ar": "المعالج",
+    "de": "Prozessor",
+    "en": "Processor",
+    "es": "Procesador",
+    "fr": "Processeur",
+    "ja": "プロセッサ",
+    "ko": "프로세서",
+    "pt": "Processador",
+    "ru": "Процессор",
+    "zh-hans": "处理器"
+  },
+  "system.about.disk": {
+    "ar": "مساحة القرص",
+    "de": "Festplattenspeicher",
+    "en": "Disk Space",
+    "es": "Espacio en disco",
+    "fr": "Espace disque",
+    "ja": "ディスク容量",
+    "ko": "디스크 공간",
+    "pt": "Espaço em disco",
+    "ru": "Дисковое пространство",
+    "zh-hans": "磁盘空间"
+  },
+  "system.about.distribution": {
+    "ar": "توزيعة النظام",
+    "de": "Distribution",
+    "en": "Distribution",
+    "es": "Distribución",
+    "fr": "Distribution",
+    "ja": "ディストリビューション",
+    "ko": "배포판",
+    "pt": "Distribuição",
+    "ru": "Дистрибутив",
+    "zh-hans": "发行版"
+  },
+  "system.about.kernel": {
+    "ar": "إصدار النواة",
+    "de": "Kernel-Version",
+    "en": "Kernel Version",
+    "es": "Versión del kernel",
+    "fr": "Version du noyau",
+    "ja": "カーネルバージョン",
+    "ko": "커널 버전",
+    "pt": "Versão do kernel",
+    "ru": "Версия ядра",
+    "zh-hans": "内核版本"
+  },
+  "system.about.memory": {
+    "ar": "الذاكرة الفعلية",
+    "de": "Physikalischer Arbeitsspeicher",
+    "en": "Physical Memory",
+    "es": "Memoria física",
+    "fr": "Mémoire physique",
+    "ja": "物理メモリ",
+    "ko": "물리 메모리",
+    "pt": "Memória física",
+    "ru": "Физическая память",
+    "zh-hans": "物理内存"
+  },
+  "system.about.osVersion": {
+    "ar": "إصدار النظام",
+    "de": "Betriebssystemversion",
+    "en": "OS Version",
+    "es": "Versión del SO",
+    "fr": "Version du système",
+    "ja": "OSバージョン",
+    "ko": "OS 버전",
+    "pt": "Versão do SO",
+    "ru": "Версия ОС",
+    "zh-hans": "系统版本"
+  },
+  "system.start": {
+    "ar": "ابدأ",
+    "de": "Starten",
+    "en": "Start",
+    "es": "Iniciar",
+    "fr": "Démarrer",
+    "ja": "開始",
+    "ko": "시작",
+    "pt": "Iniciar",
+    "ru": "Пуск",
+    "zh-hans": "开始"
+  },
+  "system.window.close": {
+    "ar": "إغلاق",
+    "de": "Schließen",
+    "en": "Close",
+    "es": "Cerrar",
+    "fr": "Fermer",
+    "ja": "閉じる",
+    "ko": "닫기",
+    "pt": "Fechar",
+    "ru": "Закрыть",
+    "zh-hans": "关闭"
+  },
+  "system.window.maximize": {
+    "ar": "تكبير",
+    "de": "Maximieren",
+    "en": "Maximize",
+    "es": "Maximizar",
+    "fr": "Agrandir",
+    "ja": "最大化",
+    "ko": "최대화",
+    "pt": "Maximizar",
+    "ru": "Развернуть",
+    "zh-hans": "最大化"
+  },
+  "system.window.minimize": {
+    "ar": "تصغير",
+    "de": "Minimieren",
+    "en": "Minimize",
+    "es": "Minimizar",
+    "fr": "Réduire",
+    "ja": "最小化",
+    "ko": "최소화",
+    "pt": "Minimizar",
+    "ru": "Свернуть",
+    "zh-hans": "最小化"
   }
 }

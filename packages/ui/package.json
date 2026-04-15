@@ -1,12 +1,18 @@
 {
-  "name": "@webroamer/commons",
+  "name": "@webroamer/ui",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "license": "GPL-3.0-or-later",
   "author": "Fuyeor <https://www.fuyeor.com/@Fuyeor>",
-  "main": "./index.ts",
+  "main": "./src/index.ts",
   "sideEffects": false,
+  "scripts": {
+    "test": "vitest run"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "peerDependencies": {
     "lit": "*",
     "signal-polyfill": "*",

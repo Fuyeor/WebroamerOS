@@ -18,7 +18,7 @@ export class SystemTaskBar extends SignalWatcher(LitElement) {
     .task-bar {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 6px;
       height: var(--task-bar-height, 48px);
       padding: 0 16px;
       background: var(--fuyeor-purple-light,);
@@ -48,19 +48,19 @@ export class SystemTaskBar extends SignalWatcher(LitElement) {
 
     /* 运行中的应用图标样式 */
     .app-icon {
-      width: 40px;
       height: 40px;
-      border-radius: 8px;
+      padding: 0 12px;
+      border-radius: var(--radius-sm);
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       color: white;
-      font-size: 12px;
+      font-size: 0.8rem;
       font-weight: bold;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid transparent;
-      transition: all 0.2s;
+      transition: 0.2s;
       user-select: none;
     }
     .app-icon:hover {

@@ -6,8 +6,9 @@ packages:
 
   - "packages/commons"
   - "packages/locale"
+  - "packages/query"
+  - "packages/ui"
 
   - "packages/vendor/fuyeor/packages/commons"
-  - "packages/vendor/fuyeor/packages/interactify"
   - "packages/vendor/fuyeor/packages/tsconfig"
   - "packages/vendor/fuyeor/packages/config"

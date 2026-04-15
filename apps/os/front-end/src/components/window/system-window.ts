@@ -1,7 +1,9 @@
 // @/components/window/system-window.ts
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { type WindowState, WindowManagerAPI } from '@/shared/signals/wm';
+import { Locale } from '@fuyeor/locale';
+import { WindowManagerAPI, type WindowState } from '@/shared/signals/wm';
+import { tooltip } from '@/shared/directives/tooltip';
 
 @customElement('system-window')
 export class SystemWindow extends LitElement {
@@ -215,14 +217,17 @@ export class SystemWindow extends LitElement {
         <div class="window-controls" @mousedown=${(e: Event) => e.stopPropagation()}>
           <button
             class="control-btn btn-minimize"
+            ${tooltip({ text: Locale.t(`system.window.minimize`), placement: 'bottom' })}
             @click=${() => WindowManagerAPI.minimizeApp(this.state.id)}
           ></button>
           <button
             class="control-btn btn-maximize"
+            ${tooltip({ text: Locale.t(`system.window.maximize`), placement: 'bottom' })}
             @click=${() => WindowManagerAPI.toggleMaximize(this.state.id)}
           ></button>
           <button
             class="control-btn btn-close"
+            ${tooltip({ text: Locale.t(`system.window.close`), placement: 'bottom' })}
             @click=${() => WindowManagerAPI.closeApp(this.state.id)}
           ></button>
         </div>

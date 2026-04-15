@@ -9,20 +9,24 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "dev:sync-types": "openapi-typescript http://localhost:5590/docs/openapi.json -o ./src/shared/types/api.d.ts"
   },
   "dependencies": {
     "@fuyeor/commons": "workspace:*",
-    "@webroamer/commons": "workspace:*",
     "@fuyeor/config": "workspace:*",
     "@fuyeor/locale": "workspace:*",
+    "@fuyeor/query": "workspace:*",
     "@lit-labs/signals": "^0.2.0",
+    "@webroamer/commons": "workspace:*",
+    "@webroamer/ui": "workspace:*",
     "lit": "^3.3.2",
     "signal-polyfill": "^0.2.2"
   },
   "devDependencies": {
     "@fuyeor/tsconfig": "workspace:*",
     "@types/node": "^24.12.0",
+    "openapi-typescript": "^7.13.0",
     "typescript": "^5.9.3",
     "vite": "^8.0.1"
   }
