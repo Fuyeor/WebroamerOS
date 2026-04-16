@@ -1,8 +1,15 @@
+// .vscode/extensions.json
 {
   "recommendations": [
+    // Lit components support
     "runem.lit-plugin",
+    // Prettier: format JSON, TS, JS
     "esbenp.prettier-vscode",
+    // Rust: language server & analyzer
     "rust-lang.rust-analyzer",
+    // Python: formatting & linting
     "charliermarsh.ruff",
+    // SQL: migrations & query formatting
+    "adpyke.vscode-sql-formatter"
   ]
 }

@@ -1,0 +1,5 @@
+# ignore all database file
+data/
+*.db
+*.db-shm
+*.db-wal

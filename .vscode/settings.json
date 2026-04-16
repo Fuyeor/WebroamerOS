@@ -1,7 +1,8 @@
+// .vscode/settings.json
 {
-  // 保存时自动格式化
+  // auto formatting when saving
   "editor.formatOnSave": true,
-  // 按语言指定默认格式化工具
+  // assign default formatting tool
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -16,6 +17,9 @@
   },
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
