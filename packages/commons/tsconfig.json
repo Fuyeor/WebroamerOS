@@ -6,7 +6,6 @@
     },
     "types": ["vite/client", "node"],
     "skipLibCheck": true,
-    "experimentalDecorators": true,
     "useDefineForClassFields": false
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts"]

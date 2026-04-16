@@ -1,11 +1,12 @@
 // @/api/index.ts
 import { HttpClient } from '@fuyeor/commons';
-import type { paths } from '@/shared/types/api.d.ts';
+import { systemState, currentUser } from '@/shared/signals/auth';
+import type { paths } from '@/shared/types/api';
 import type {
   ExtractResponse,
   ExtractRequestBody,
   ExtractQueryParams,
-} from '@/shared/types/api-helpers.ts';
+} from '@/shared/types/api-helpers';
 
 // get parameter types from HttpClient
 type OriginalParams = Parameters<typeof HttpClient.prototype.get>;
@@ -25,8 +26,9 @@ export interface WebroamerClient extends Omit<
 
   post<P extends keyof paths>(
     path: P,
-    body: ExtractRequestBody<paths[P]['post']>,
-    options?: RequestOptions,
+    ...args: [ExtractRequestBody<paths[P]['post']>] extends [never]
+      ? [body?: undefined | null, options?: any]
+      : [body: ExtractRequestBody<paths[P]['post']>, options?: any]
   ): Promise<ExtractResponse<paths[P]['post']>>;
 
   put<P extends keyof paths>(
@@ -51,7 +53,10 @@ const rawClient = new HttpClient({
   refreshTokenFn: async () => {
     await rawClient.post('/auth/refresh-token');
   },
-  onSignOut: () => {},
+  onSignOut: () => {
+    currentUser.set(null);
+    systemState.set('signedOut');
+  },
 });
 
 const apiClient = rawClient as any as WebroamerClient;

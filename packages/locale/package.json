@@ -6,7 +6,10 @@
   "license": "GPL-3.0-or-later",
   "author": "Fuyeor <https://www.fuyeor.com/@Fuyeor>",
   "main": "./index.ts",
-  "sideEffects": false,
+  "sideEffects": [
+    "./src/locale-template.ts",
+    "./index.ts"
+  ],
   "peerDependencies": {
     "lit": "*",
     "signal-polyfill": "*",

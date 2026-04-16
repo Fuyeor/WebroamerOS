@@ -1,62 +1,20 @@
 // @/components/system/start-menu.ts
-import { LitElement, html, css } from 'lit';
+import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { SignalWatcher } from '@lit-labs/signals';
+import { MutationController } from '@fuyeor/query';
+import { fetchAuthStatus, lockSession, signOut } from '@/api/auth';
 import { isStartMenuOpen } from '@/shared/signals/ui';
 import { toggleStartMenu } from '@/shared/signals/ui';
 import { WindowManagerAPI } from '@/shared/signals/wm';
+import { styles } from './start-menu.styles';
 
 import '@/apps/options/system-options';
 import '@/apps/about/about-pc';
 
 @customElement('system-start-menu')
 export class SystemStartMenu extends SignalWatcher(LitElement) {
-  static styles = css`
-    :host {
-      display: block;
-      position: fixed;
-      bottom: 60px; /* 任务栏高度 + 间距 */
-      left: 12px;
-      width: 300px;
-      min-height: 400px;
-      background: rgba(20, 20, 30, 0.85);
-      background: var(--surface-raised-transparent);
-      backdrop-filter: blur(30px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius-md);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      transform: translateY(20px);
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-      z-index: 1002;
-    }
-
-    :host([open]) {
-      transform: translateY(0);
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .menu-header {
-      padding: 20px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .menu-item {
-      padding: 12px 20px;
-      color: var(--text-secondary);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      transition: background 0.2s;
-    }
-
-    .menu-item:hover {
-      background: rgba(255, 255, 255, 0.05);
-    }
-  `;
+  static styles = styles;
 
   #openSettings() {
     toggleStartMenu();
@@ -66,6 +24,31 @@ export class SystemStartMenu extends SignalWatcher(LitElement) {
   #openAbout() {
     toggleStartMenu();
     WindowManagerAPI.openApp('about-pc', 'About This PC', 'app-about');
+  }
+
+  // use a MutationController to handle sign out
+  // so we can show loading state during the process
+  #signOutMutation = new MutationController(this, {
+    mutationFn: signOut,
+    // refresh global auth status on success, App.ts will switch to login screen
+    onSuccess: () => fetchAuthStatus(),
+  });
+
+  async #handleLock() {
+    toggleStartMenu();
+    try {
+      await lockSession();
+      // refresh global auth status
+      // App.ts will automatically switch to lock screen
+      await fetchAuthStatus();
+    } catch (err) {
+      console.error('Failed to lock session', err);
+    }
+  }
+
+  #handleSignOut() {
+    toggleStartMenu();
+    this.#signOutMutation.mutate();
   }
 
   render() {
@@ -78,15 +61,28 @@ export class SystemStartMenu extends SignalWatcher(LitElement) {
       </div>
       <div class="menu-content">
         <div class="menu-item" @click=${this.#openSettings}>
+          <span>⚙️</span>
           <locale-template keypath="settings"></locale-template>
         </div>
         <div class="menu-item" @click=${this.#openAbout}>
           <span>ℹ️</span>
           <locale-template keypath="menu.about"></locale-template>
         </div>
-        <div class="menu-item">
-          <locale-template keypath="menu.shutdown"></locale-template>
-        </div>
+      </div>
+
+      <div class="menu-footer">
+        <button class="footer-btn" @click=${this.#handleLock}>
+          <span>🔒</span>
+          <locale-template keypath="menu.lock"></locale-template>
+        </button>
+        <button
+          class="footer-btn"
+          @click=${this.#handleSignOut}
+          ?disabled=${this.#signOutMutation.isPending}
+        >
+          <span>🔌</span>
+          <locale-template keypath="menu.signout"></locale-template>
+        </button>
       </div>
     `;
   }

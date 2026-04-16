@@ -8,6 +8,6 @@ await initializeLocale();
 
 window.document.body.innerHTML = '';
 
-const app = window.document.createElement('system-view');
+const app = window.document.createElement('os-root');
 
 window.document.body.appendChild(app);

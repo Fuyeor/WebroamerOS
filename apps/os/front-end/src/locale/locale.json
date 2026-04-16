@@ -107,6 +107,18 @@
     "ru": "Тёмная",
     "zh-hans": "暗色模式"
   },
+  "system.setup.initializing": {
+    "ar": "جاري تهيئة النظام...",
+    "de": "System wird initialisiert...",
+    "en": "System initializing...",
+    "es": "Inicializando el sistema...",
+    "fr": "Initialisation du système...",
+    "ja": "システムを初期化中...",
+    "ko": "시스템 초기화 중...",
+    "pt": "Inicializando o sistema...",
+    "ru": "Инициализация системы...",
+    "zh-hans": "系统初始化中..."
+  },
   "settings.theme.fontsize": {
     "ar": "حجم الخط",
     "de": "Schriftgröße",
@@ -166,6 +178,18 @@
     "pt": "Papel de parede da tela",
     "ru": "Обои экрана",
     "zh-hans": "屏幕壁纸"
+  },
+  "system.about": {
+    "ar": "حول الجهاز",
+    "de": "Über dieses Gerät",
+    "en": "About this device",
+    "es": "Acerca de este dispositivo",
+    "fr": "À propos de cet appareil",
+    "ja": "このデバイスについて",
+    "ko": "이 기기 정보",
+    "pt": "Sobre este dispositivo",
+    "ru": "Об устройстве",
+    "zh-hans": "关于此设备"
   },
   "system.about.cpu": {
     "ar": "المعالج",
@@ -239,6 +263,126 @@
     "ru": "Версия ОС",
     "zh-hans": "系统版本"
   },
+  "system.auth.lock": {
+    "ar": "قفل",
+    "de": "Sperren",
+    "en": "Lock",
+    "es": "Bloquear",
+    "fr": "Verrouiller",
+    "ja": "ロック",
+    "ko": "잠금",
+    "pt": "Bloquear",
+    "ru": "Заблокировать",
+    "zh-hans": "锁定"
+  },
+  "system.auth.signin": {
+    "ar": "تسجيل الدخول",
+    "de": "Anmelden",
+    "en": "Sign In",
+    "es": "Iniciar sesión",
+    "fr": "Connexion",
+    "ja": "サインイン",
+    "ko": "로그인",
+    "pt": "Entrar",
+    "ru": "Войти",
+    "zh-hans": "登录"
+  },
+  "system.auth.signout": {
+    "ar": "تسجيل الخروج",
+    "de": "Abmelden",
+    "en": "Sign Out",
+    "es": "Cerrar sesión",
+    "fr": "Déconnexion",
+    "ja": "サインアウト",
+    "ko": "로그아웃",
+    "pt": "Sair",
+    "ru": "Выйти",
+    "zh-hans": "登出"
+  },
+  "system.nickname": {
+    "ar": "الاسم المستعار",
+    "de": "Spitzname",
+    "en": "Nickname",
+    "es": "Apodo",
+    "fr": "Surnom",
+    "ja": "ニックネーム",
+    "ko": "닉네임",
+    "pt": "Apelido",
+    "ru": "Никнейм",
+    "zh-hans": "昵称"
+  },
+  "system.password": {
+    "ar": "كلمة المرور",
+    "de": "Passwort",
+    "en": "Password",
+    "es": "Contraseña",
+    "fr": "Mot de passe",
+    "ja": "パスワード",
+    "ko": "비밀번호",
+    "pt": "Senha",
+    "ru": "Пароль",
+    "zh-hans": "密码"
+  },
+  "system.password.warn.desc": {
+    "ar": "هذا يعني أن أي شخص على الشبكة الحالية يمكنه الوصول إلى حسابك. إذا تم نشره على شبكة عامة، فهناك خطر الوصول غير المصرح به. يرجى التأكد من أنك تثق تمامًا في بيئة الشبكة الحالية.",
+    "de": "Dies bedeutet, dass jeder im aktuellen Netzwerk auf Ihr Konto zugreifen kann. Bei Bereitstellung in einem öffentlichen Netzwerk besteht die Gefahr unbefugter Zugriffe. Bitte stellen Sie sicher, dass Sie der aktuellen Netzwerkumgebung vollständig vertrauen.",
+    "en": "This means anyone on the current network can access your account. If deployed in a public network, there is a risk of unauthorized access. Please ensure you fully trust the current network environment.",
+    "es": "Esto significa que cualquiera en la red actual puede acceder a su cuenta. Si se implementa en una red pública, existe el riesgo de acceso no autorizado. Asegúrese de confiar plenamente en el entorno de red actual.",
+    "fr": "Cela signifie que toute personne sur le réseau actuel peut accéder à votre compte. En cas de déploiement sur un réseau public, il existe un risque d'accès non autorisé. Veuillez vous assurer que vous avez une confiance totale dans l'environnement réseau actuel.",
+    "ja": "これは、現在のネットワーク上の誰でもあなたのアカウントにアクセスできることを意味します。パブリックネットワークに展開する場合、不正アクセスのリスクがあります。現在のネットワーク環境を完全に信頼していることを確認してください。",
+    "ko": "이는 현재 네트워크에 있는 누구든지 귀하의 계정에 접근할 수 있음을 의미합니다. 공용 네트워크에 배포된 경우 무단 접근의 위험이 있습니다. 현재 네트워크 환경을 완전히 신뢰할 수 있는지 확인하십시오.",
+    "pt": "Isso significa que qualquer pessoa na rede atual pode acessar sua conta. Se implantado em uma rede pública, há risco de acesso não autorizado. Certifique-se de confiar totalmente no ambiente de rede atual.",
+    "ru": "Это означает, что любой пользователь в текущей сети может получить доступ к вашей учетной записи. При развертывании в общедоступной сети существует риск несанкционированного доступа. Пожалуйста, убедитесь, что вы полностью доверяете текущей сетевой среде.",
+    "zh-hans": "这意味着当前网络中的任何人都可以访问您的账户。若在公网环境下部署，存在被未经授权访问的风险。请确保您完全信任当前的网络环境。"
+  },
+  "system.password.warn.title": {
+    "ar": "لم يتم تعيين حماية بكلمة مرور",
+    "de": "Kein Passwortschutz festgelegt",
+    "en": "Password protection not set",
+    "es": "Protección por contraseña no configurada",
+    "fr": "Protection par mot de passe non définie",
+    "ja": "パスワード保護が設定されていません",
+    "ko": "비밀번호 보호가 설정되지 않음",
+    "pt": "Proteção por senha não definida",
+    "ru": "Защита паролем не установлена",
+    "zh-hans": "未设置密码保护"
+  },
+  "system.setup.start": {
+    "ar": "لنبدأ!",
+    "de": "Los geht's!",
+    "en": "Get Started",
+    "es": "Empezar",
+    "fr": "Commencer",
+    "ja": "開始する",
+    "ko": "시작하기",
+    "pt": "Começar",
+    "ru": "Начать",
+    "zh-hans": "让我们开始吧！"
+  },
+  "system.setup.welcome": {
+    "ar": "مرحبًا بك في Webroamer OS!",
+    "de": "Willkommen bei Webroamer OS!",
+    "en": "Welcome to Webroamer OS!",
+    "es": "¡Bienvenido a Webroamer OS!",
+    "fr": "Bienvenue sur Webroamer OS !",
+    "ja": "Webroamer OSへようこそ！",
+    "ko": "Webroamer OS에 오신 것을 환영합니다!",
+    "pt": "Bem-vindo ao Webroamer OS!",
+    "ru": "Добро пожаловать в Webroamer OS!",
+    "zh-hans": "欢迎使用 Webroamer OS！"
+  },
+  "system.setup.welcome.desc": {
+    "ar": "قم بإنشاء حساب المسؤول الخاص بك.",
+    "de": "Erstellen Sie Ihr Administratorkonto.",
+    "en": "Create your administrator account.",
+    "es": "Cree su cuenta de administrador.",
+    "fr": "Créez votre compte administrateur.",
+    "ja": "管理者アカウントを作成してください。",
+    "ko": "관리자 계정을 생성하세요.",
+    "pt": "Crie sua conta de administrador.",
+    "ru": "Создайте учетную запись администратора.",
+    "zh-hans": "创建你的管理员账号。"
+  },
   "system.start": {
     "ar": "ابدأ",
     "de": "Starten",
@@ -250,6 +394,18 @@
     "pt": "Iniciar",
     "ru": "Пуск",
     "zh-hans": "开始"
+  },
+  "system.username": {
+    "ar": "اسم المستخدم",
+    "de": "Benutzername",
+    "en": "Username",
+    "es": "Nombre de usuario",
+    "fr": "Nom d'utilisateur",
+    "ja": "ユーザー名",
+    "ko": "사용자 이름",
+    "pt": "Nome de usuário",
+    "ru": "Имя пользователя",
+    "zh-hans": "用户名"
   },
   "system.window.close": {
     "ar": "إغلاق",
